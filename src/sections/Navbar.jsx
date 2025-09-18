@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import {motion} from 'motion/react';
 function Navigation(){
   return (<ul className='nav-ul'>
     <li className='nav-li'>
@@ -42,11 +43,17 @@ const Navbar = () => {
           <nav className='hidden sm:flex'><Navigation /></nav>
         </div>
     </div>
-    {isOpen && (<div className='block overflow-hidden text-right sm:hidden'>
+    {isOpen && (<motion.div className='block overflow-hidden text-right sm:hidden'
+    initial={{ opacity: 0, x: -10}}
+    animate={{ opacity: 1, x: 0}}
+    animated={{ opacity: 1, x: 0}}
+    style={{maxHeight: '100vh'}}
+    transition={{ duration: 0.6}}>
       <nav className='pb-5'>
         <Navigation />
       </nav>
-    </div>)}
+    </motion.div>
+  )}
   </div>
   
 }
