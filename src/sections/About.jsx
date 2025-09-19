@@ -1,7 +1,9 @@
 import React from 'react'
 import Card from '../component/Card';
+import { Globe } from '../component/Globe';
 
 const About = () => {
+    const grid2Container = React.useRef();
   return    ( <section className='c-space section-spacing'>
     <h2 className='text-heading'>About Me</h2>
     <div className='grid grid-cols-1 md:grid-cols-6 md:auto-rows-[18rem] mt-12 gap-2'>
@@ -21,27 +23,46 @@ const About = () => {
         </div>
         {/* grid 2 */}
         <div className='grid-default-color grid-2'>
-            <div className='flex items-center justify-center w-full h-full'>
+            <div
+                ref={grid2Container} 
+                className='flex items-center justify-center w-full h-full'>
                 <p className='flex items-end text-5xl text-gray-500'>
                     CODE IS CRAFT
                 </p>
                 <Card 
-                style={{ rotate: "75deg", top: "30%", left: "25%"}} text="Learning" />
-                <Card style={{ rotate: "-30deg", top: "60%", left: "50%"}} text="Building" />
-                <Card style={{ rotate: "90deg", bottom: "45%", left: "75%"}} text="Designing" />
-                <Card style={{ rotate: "30deg", top: "55%", left: "0%"}} text="Coding" />
-                <Card style={{ rotate: "20deg", top: "10%", left: "48%"}} text="Exploring" />
-                <Card style={{ rotate: "15deg", top: "10%", left: "0%"}} text="Creating" />
+                style={{ rotate: "75deg", top: "30%", left: "25%"}} text="Learning"
+                containerRef={grid2Container} />
+                <Card style={{ rotate: "-30deg", top: "60%", left: "50%"}} text="Building" 
+                containerRef={grid2Container}/>
+                <Card style={{ rotate: "90deg", bottom: "45%", left: "75%"}} text="Designing" 
+                containerRef={grid2Container}/>
+                <Card style={{ rotate: "30deg", top: "55%", left: "0%"}} text="Coding" 
+                containerRef={grid2Container}/>
+                <Card style={{ rotate: "20deg", top: "10%", left: "48%"}} text="Exploring" 
+                containerRef={grid2Container}/>
+                <Card style={{ rotate: "15deg", top: "10%", left: "0%"}} text="Creating" 
+                containerRef={grid2Container}/>
                 <Card style={{ rotate: "25deg", top: "30%", left: "50%"}} 
-                image="assets/logos/tailwindcss.Default" />
+                image="assets/logos/tailwindcss.Default" 
+                containerRef={grid2Container}/>
                 <Card style={{ rotate: "-25deg", top: "42%", left: "25%"}} 
-                image="assets/logos/javascript.png" />
+                image="assets/logos/javascript.png" 
+                containerRef={grid2Container}/>
                 <Card style={{ rotate: "25deg", top: "74%", left: "75%"}} 
-                image="assets/logos/ThreeJS.png" />
+                image="assets/logos/ThreeJS.png" 
+                containerRef={grid2Container}/>
             </div>
             </div>
         {/* grid 3 */}
-        <div className='grid-black-color grid-3'></div>
+        <div className='grid-black-color grid-3'>
+            <div className='z-10 w-[50%]'>
+                <p className='headtext'>Time Zone</p>
+                <p className='subtext'>I'm based on Bengaluru, and open to work worldwide</p>
+            </div>
+            <figure className='absolute left-[30%] top-[10%]'>
+                <Globe />
+            </figure>
+        </div>
         {/* grid 4 */}
         <div className='grid-special-color grid-4'></div>
         {/* grid 5 */}
