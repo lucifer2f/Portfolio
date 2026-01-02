@@ -3,6 +3,8 @@ import Navbar from './sections/Navbar';
 import Hero from './sections/Hero';
 import About from './sections/About';
 import Projects from './sections/Projects';
+import Experiences from './sections/Experiences';
+import Contact from './sections/Contact';
 
 const App = () => {
   return (
@@ -11,15 +13,11 @@ const App = () => {
       <Hero/>
       <About/>
       <Projects/>
+      <Experiences/>
+      <Contact/>
       <section className='min-h-screen'/>      
-      <section className='min-h-screen'/>      
-      <section className='min-h-screen'/>      
-      <section className='min-h-screen'/>      
-            
-            
-      {/* experience */}
+      <section className='min-h-screen'/>
       {/* testimonial */}
-      {/* contact */}
       {/* footer */}
     </div>
   );
