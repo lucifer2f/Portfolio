@@ -1,7 +1,7 @@
 import React from 'react'
 import ProjectDetails from './ProjectDetails'
 
-const Project = ({title,description, subDescription,href, image, tags, setPreview}) => {
+const Project = ({title,description, subDescription,href, github, image, tags, setPreview}) => {
     const [isHidden, setIsHidden] = React.useState(false);
   return (
            <>
@@ -26,13 +26,14 @@ const Project = ({title,description, subDescription,href, image, tags, setPrevie
         </div>
         <div className="bg-gradient-to-r from-transparent
         via-neutral-700 to-transparent h-[1px] w-full"/>
-        {isHidden &&(<ProjectDetails 
+        {isHidden &&(<ProjectDetails
             title={title}
             description={description}
             subDescription={subDescription}
             image={image}
             tags={tags}
             href={href}
+            github={github}
             closeModal={() => setIsHidden(false)}/>)}
         </>
         
