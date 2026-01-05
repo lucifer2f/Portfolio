@@ -6,7 +6,7 @@ export const myProjects = [
   {
     id: 1,
     title: "GenAI-Based SLD Design Automation Platform",
-      image: "/assets/projects/EDA.png",
+      image: import.meta.env.BASE_URL + "assets/projects/EDA.png",
     description:
       "A GenAI-driven platform that automates the complete creation of electrical Single Line Diagrams (SLDs), significantly reducing manual engineering effort.",
     subDescription: [
@@ -17,10 +17,10 @@ export const myProjects = [
       "Translated core electrical engineering workflows into scalable AI-assisted software systems.",
     ],
     tags: [
-      { id: 1, name: "Python", path: "/assets/logos/python.png" },
-      { id: 2, name: "Streamlit", path: "/assets/logos/streamlit.svg" },
-      { id: 3, name: "Graphviz", path: "/assets/logos/graphviz.png" },
-      { id: 4, name: "GenAI", path: "/assets/logos/ai.png" },
+      { id: 1, name: "Python", path: import.meta.env.BASE_URL + "assets/logos/python.png" },
+      { id: 2, name: "Streamlit", path: import.meta.env.BASE_URL + "assets/logos/streamlit.svg" },
+      { id: 3, name: "Graphviz", path: import.meta.env.BASE_URL + "assets/logos/graphviz.png" },
+      { id: 4, name: "GenAI", path: import.meta.env.BASE_URL + "assets/logos/ai.png" },
     ],
     href: "https://edasystem.streamlit.app/",
     github: "https://github.com/lucifer2f/sld-design",
@@ -29,7 +29,7 @@ export const myProjects = [
   {
     id: 2,
     title: "MILO – Youth Mental Wellness Platform",
-    image: "/assets/projects/milo.jpg",
+    image: import.meta.env.BASE_URL + "assets/projects/milo.jpg",
     description:
       "A GenAI-powered mental wellness platform for youth, combining conversational AI, gamification, journaling, and mood tracking.",
     subDescription: [
@@ -40,10 +40,10 @@ export const myProjects = [
       "Added moderated community features (Squad Mode) for safe, anonymous peer interaction.",
     ],
     tags: [
-      { id: 1, name: "TypeScript", path: "/assets/logos/typescript.png" },
-      { id: 2, name: "Firebase", path: "/assets/logos/firebase.svg" },
-      { id: 3, name: "GenAI", path: "/assets/logos/ai.png" },
-      { id: 4, name: "Git", path: "/assets/logos/git.svg" },
+      { id: 1, name: "TypeScript", path: import.meta.env.BASE_URL + "assets/logos/typescript.png" },
+      { id: 2, name: "Firebase", path: import.meta.env.BASE_URL + "assets/logos/firebase.svg" },
+      { id: 3, name: "GenAI", path: import.meta.env.BASE_URL + "assets/logos/ai.png" },
+      { id: 4, name: "Git", path: import.meta.env.BASE_URL + "assets/logos/git.svg" },
     ],
     href: "https://milo-collab-nki9ta6z0-apurv-ns-projects.vercel.app",
     github: "https://github.com/vapor7v/milo-collab",
@@ -52,7 +52,7 @@ export const myProjects = [
   {
     id: 3,
     title: "Food Delivery Platform – Nashtto",
-    image: "/assets/projects/nashtto.png",
+    image: import.meta.env.BASE_URL + "assets/projects/nashtto.png",
     description:
       "A full-scale food delivery platform built for a startup, covering customer ordering, restaurant operations, and delivery partner workflows.",
     subDescription: [
@@ -63,10 +63,10 @@ export const myProjects = [
       "Gained hands-on experience in startup execution, scalability, and end-to-end product development.",
     ],
     tags: [
-      { id: 1, name: "TypeScript", path: "/assets/logos/typescript.png" },
-      { id: 2, name: "JavaScript", path: "/assets/logos/javascript.svg" },
-      { id: 3, name: "Backend APIs", path: "/assets/logos/api.png" },
-      { id: 4, name: "Database", path: "/assets/logos/database.png" },
+      { id: 1, name: "TypeScript", path: import.meta.env.BASE_URL + "assets/logos/typescript.png" },
+      { id: 2, name: "JavaScript", path: import.meta.env.BASE_URL + "assets/logos/javascript.svg" },
+      { id: 3, name: "Backend APIs", path: import.meta.env.BASE_URL + "assets/logos/api.png" },
+      { id: 4, name: "Database", path: import.meta.env.BASE_URL + "assets/logos/database.png" },
     ],
     href: "",
     github: "https://github.com/yogesh1454/food-app",
@@ -74,7 +74,7 @@ export const myProjects = [
   {
   id: 4,
   title: "Personal Portfolio Website",
-  image: "/assets/projects/portfolio.png",
+  image: import.meta.env.BASE_URL + "assets/projects/portfolio.png",
   description:
     "A modern, interactive personal portfolio website built to showcase my skills, projects, experiences, and online presence as a software developer.",
   subDescription: [
@@ -86,11 +86,11 @@ export const myProjects = [
     "Includes interactive UI elements such as parallax backgrounds, orbiting animations, and a copy-email button.",
   ],
   tags: [
-    { id: 1, name: "React", path: "/assets/logos/react.svg" },
-    { id: 2, name: "Vite", path: "/assets/logos/vitejs.svg" },
-    { id: 3, name: "Tailwind CSS", path: "/assets/logos/tailwindcss.svg" },
-    { id: 4, name: "Three.js", path: "/assets/logos/threejs.svg" },
-    { id: 5, name: "JavaScript", path: "/assets/logos/javascript.svg" },
+    { id: 1, name: "React", path: import.meta.env.BASE_URL + "assets/logos/react.svg" },
+    { id: 2, name: "Vite", path: import.meta.env.BASE_URL + "assets/logos/vitejs.svg" },
+    { id: 3, name: "Tailwind CSS", path: import.meta.env.BASE_URL + "assets/logos/tailwindcss.svg" },
+    { id: 4, name: "Three.js", path: import.meta.env.BASE_URL + "assets/logos/threejs.svg" },
+    { id: 5, name: "JavaScript", path: import.meta.env.BASE_URL + "assets/logos/javascript.svg" },
   ],
   href: "", // add live URL once deployed (Vercel / Netlify)
   github: "https://github.com/lucifer2f/Portfolio",
