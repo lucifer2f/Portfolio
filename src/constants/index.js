@@ -136,9 +136,9 @@ export const mySocials = [
 export const experiences = [
   {
     id: 1,
-    role: "Software Developer (Product Engineering)",
-    company: "Nashtto – Food Delivery Startup",
-    duration: "2025 – Present",
+    role: "Full-Stack Developer Intern",
+    company: "TwoDots Software Services",
+    duration: "2025 –2026",
     points: [
       "Working as part of a 3-member core engineering team on a food delivery startup.",
       "Developing a customer-facing application for restaurant discovery, ordering, and real-time order tracking.",

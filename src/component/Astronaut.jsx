@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
-import { useMotionValue, useSpring } from 'framer-motion' 
 import { useFrame } from '@react-three/fiber';
 
 export function Astronaut(props) {
@@ -13,14 +12,12 @@ export function Astronaut(props) {
     }
 }, [animations, actions]);
 
-const yPosition = useMotionValue(5);
-const ySpring = useSpring(yPosition, {  damping: 30 });
-useEffect(() => {
-    ySpring.set(-1);
-}, [ySpring]);
-useFrame(() => {
-    group.current.position.y = ySpring.get();
-});
+  useFrame((state) => {
+    if (group.current) {
+      group.current.position.y = -1 + Math.sin(state.clock.elapsedTime * 2) * 0.12;
+    }
+  });
+
   return (
     <group ref={group} {...props} dispose={null}
     rotation={[-Math.PI / 2, -0.2, 2.2]} scale={props.scale || 0.3}

@@ -1,5 +1,6 @@
 import React from 'react'
-import ProjectDetails from './ProjectDetails'
+
+const ProjectDetails = React.lazy(() => import('./ProjectDetails'))
 
 const Project = ({title,description, subDescription,href, github, image, tags, setPreview}) => {
     const [isHidden, setIsHidden] = React.useState(false);
@@ -21,20 +22,24 @@ const Project = ({title,description, subDescription,href, github, image, tags, s
             onClick={() => setIsHidden(true)}
            className="flex items-center gap-1 cursor-pointer hover-animation">
             Read More
-            <img src="assets/arrow-right.svg" className="w-5"/>
+            <img src="assets/arrow-right.svg" className="w-5" alt="" loading="lazy"/>
            </button>
         </div>
         <div className="bg-gradient-to-r from-transparent
         via-neutral-700 to-transparent h-[1px] w-full"/>
-        {isHidden &&(<ProjectDetails
-            title={title}
-            description={description}
-            subDescription={subDescription}
-            image={image}
-            tags={tags}
-            href={href}
-            github={github}
-            closeModal={() => setIsHidden(false)}/>)}
+        {isHidden &&(
+          <React.Suspense fallback={<div className="sr-only" />}>
+            <ProjectDetails
+              title={title}
+              description={description}
+              subDescription={subDescription}
+              image={image}
+              tags={tags}
+              href={href}
+              github={github}
+              closeModal={() => setIsHidden(false)}/>
+          </React.Suspense>
+        )}
         </>
         
   )
