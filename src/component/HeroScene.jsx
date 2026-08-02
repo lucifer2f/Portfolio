@@ -1,30 +1,31 @@
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import { Float, OrbitControls } from '@react-three/drei';
-import { easing } from 'maath';
 import { Astronaut } from './Astronaut';
 
 const HeroScene = ({ isMobile }) => {
-  const astronautScale = isMobile ? 0.23 : undefined;
+  const astronautScale = undefined;
   const astronautPosition = isMobile ? [0, -1.5, 0] : undefined;
 
   return (
-    <Canvas camera={{ position: [0, 1, 3] }}>
-      <Float>
+    <Canvas
+      camera={{ position: [0, 1, 3] }}
+      className={isMobile ? 'pointer-events-none' : ''}
+      style={isMobile ? { pointerEvents: 'none' } : undefined}
+    >
+      <Float
+        enabled={!isMobile}
+        speed={1.4}
+        floatIntensity={0.7}
+        rotationIntensity={0.15}
+      >
         <Astronaut
           scale={astronautScale}
           position={astronautPosition}
         />
-        <Rig />
-        <OrbitControls enableZoom={false} />
+        {!isMobile && <OrbitControls enableZoom={false} />}
       </Float>
     </Canvas>
   );
 };
-
-function Rig() {
-  return useFrame((state, delta) => {
-    easing.damp3(state.camera.position, [state.mouse.x / 10, 1 + state.mouse.y / 10, 3], 0.5, delta);
-  });
-}
 
 export default HeroScene;

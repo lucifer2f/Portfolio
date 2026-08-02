@@ -140,11 +140,13 @@ export const experiences = [
     company: "TwoDots Software Services",
     duration: "2025 –2026",
     points: [
-      "Working as part of a 3-member core engineering team on a food delivery startup.",
-      "Developing a customer-facing application for restaurant discovery, ordering, and real-time order tracking.",
-      "Building a restaurant partner app for menu management, order handling, and operational workflows.",
-      "Contributing to a delivery partner app for order assignment, navigation, and delivery updates.",
-      "Involved in end-to-end product development, backend logic, API integration, and feature planning.",
+      "Developed React Native (Expo) Customer and Vendor apps, building features from UI implementation to API integration.",
+      "Converted Figma wireframes into responsive,reusable mobile interfaces.",
+      "Integrated Firebase Authentication, MapmyIndia, REST APIs for authentication, vendor verification, and order tracking.",
+      "Built real-time food listing and availability sync between Vendor and Customer apps.",
+      "Implemented vendor onboarding with backend-driven GST and business verification.",
+      "Resolved data synchronization issues between Vendor and Customer apps by debugging APIs and application state.",
+      "Used Expo debugging tools to identify and troubleshoot API integration issues.",
     ],
   },
 
@@ -182,9 +184,11 @@ export const experiences = [
     company: "R.V. College of Engineering, Bengaluru",
     duration: "2022 – 2026",
     points: [
-      "Undergraduate engineering student with strong focus on software development and GenAI-based systems.",
-      "Actively participated in national-level hackathons and product-focused competitions.",
-      "Applied engineering fundamentals to real-world startup and AI-driven projects.",
+      "Served as Creative Head of RAAG, leading social media, brand collaborations, event promotions, and merchandise design.",
+      "Designed and executed marketing campaigns that increased club visibility across the college.",
+      "Active Rotaract Club member for two years, contributing to community initiatives and creative projects.",
+      "Won 2nd Place in an inter-college photography competition.",
+      "Edited the official Rotaract video showcased at the Annual District Conference, helping the club win Best Video.",
     ],
   },
 ];
